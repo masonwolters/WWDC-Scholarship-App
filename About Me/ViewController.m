@@ -27,7 +27,7 @@
     
     //buttonNavView = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height + heightOfButton, self.view.frame.size.width, self.view.frame.size.height)];
     buttonNavView = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-
+    //mason test
     //[self.view addSubview:buttonNavView];
     
     AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
