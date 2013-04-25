@@ -12,12 +12,18 @@
 #define heightOfButton 70
 #define numberOfButtons 6
 
+@protocol ButtonNavigationViewDelegate <NSObject>
+
+- (void)didSelectButtonWithIndex:(int)index;
+
+@end
+
 @interface ButtonNavigationView : UIView <AwesomeMenuDelegate> {
     UIButton *navButton;
     BOOL buttonDown;
     NSMutableArray *buttons;
 }
 
-
+@property (strong, nonatomic) NSObject<ButtonNavigationViewDelegate> *delegate;
 
 @end

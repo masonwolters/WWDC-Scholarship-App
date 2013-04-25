@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ButtonNavigationView.h"
 #import "AwesomeMenu.h"
+#import "AboutMeViewController.h"
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <ButtonNavigationViewDelegate> {
     ButtonNavigationView *buttonNavView;
 }
+
+
 
 @end

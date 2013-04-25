@@ -143,6 +143,8 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    NSLog(@"touches began on view");
+    [_delegate AwesomeMenuDidStartClosing:self];
     self.expanding = !self.isExpanding;
 }
 
@@ -151,6 +153,8 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 {
     if (item == _addButton) 
     {
+        NSLog(@"touches starting");
+        [_delegate AwesomeMenuDidStartOpening:self];
         self.expanding = !self.isExpanding;
     }
 }
@@ -161,6 +165,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     {
         return;
     }
+    NSLog(@"touches ended");
     // blowup the selected menu button
     CAAnimationGroup *blowup = [self _blowupAnimationAtPoint:item.center];
     [item.layer addAnimation:blowup forKey:@"blowup"];

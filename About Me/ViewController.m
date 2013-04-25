@@ -14,9 +14,25 @@
 
 @implementation ViewController
 
+#pragma mark - ButtonNavigationViewDelegate
+
+- (void)didSelectButtonWithIndex:(int)index {
+    NSLog(@"did select index: %i", index);
+    if (index == 0) {
+        //about me
+        AboutMeViewController *aboutMe = [[AboutMeViewController alloc] init];
+        aboutMe.view.frame = CGRectOffset(aboutMe.view.frame, 0, 20);
+        aboutMe.view.alpha = 0.0f;
+        aboutMe.view.transform = CGAffineTransformMakeScale(.8, .8);
+        [self.view addSubview:aboutMe.view];
+        [UIView animateWithDuration:.2f animations:^{
+            aboutMe.view.alpha = 1.0f;
+            aboutMe.view.transform = CGAffineTransformMakeScale(1, 1);
+        }];
+    }
+}
+
 #pragma mark - Handle Events
-
-
 
 #pragma mark - UIViewController Methods
 
@@ -25,26 +41,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //buttonNavView = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height + heightOfButton, self.view.frame.size.width, self.view.frame.size.height)];
-    buttonNavView = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    //mason test
-    //[self.view addSubview:buttonNavView];
     
-    AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
-    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
-    AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
-    AwesomeMenuItem *item4 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
-    AwesomeMenuItem *item5 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
-    AwesomeMenuItem *item6 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png"]];
-    
-    
-    NSArray *menus = [NSArray arrayWithObjects:item1, item2, item3, item4, item5, item6, nil];
-    
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:CGRectMake(100, 100, 320, 200) menus:menus];
-    
-    menu.startPoint = CGPointMake(60, 150);
-    menu.delegate = self;
-    [self.view addSubview:menu];
+    buttonNavView = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height/2 + heightOfButton/2, self.view.frame.size.width, self.view.frame.size.height)];
+    buttonNavView.delegate = self;
+    buttonNavView.transform = CGAffineTransformMakeScale(.5, .5);
+    [self.view.window addSubview:buttonNavView];
+
+    UIView *test = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1500, 1500)];
+    test.backgroundColor = [UIColor blueColor];
+    [self.view.window addSubview:test];
+
     
 }
 

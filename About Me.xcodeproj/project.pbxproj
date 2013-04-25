@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA2F62BE1729960E00D78B45 /* circle_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2F62BD1729960E00D78B45 /* circle_button@2x.png */; };
+		BA2F62C31729972A00D78B45 /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2F62C11729972A00D78B45 /* bg-addbutton.png */; };
+		BA2F62C41729972A00D78B45 /* bg-addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2F62C21729972A00D78B45 /* bg-addbutton@2x.png */; };
+		BA2F62C71729992000D78B45 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2F62C61729992000D78B45 /* AboutMeViewController.m */; };
 		BAD93C5717287DC000129EFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD93C5617287DC000129EFE /* UIKit.framework */; };
 		BAD93C5917287DC000129EFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD93C5817287DC000129EFE /* Foundation.framework */; };
 		BAD93C5B17287DC000129EFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD93C5A17287DC000129EFE /* CoreGraphics.framework */; };
@@ -24,7 +28,6 @@
 		BAD93C8517287DC000129EFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAD93C8317287DC000129EFE /* InfoPlist.strings */; };
 		BAD93C8817287DC000129EFE /* About_MeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD93C8717287DC000129EFE /* About_MeTests.m */; };
 		BAD93C9417287DE400129EFE /* circle_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93C9217287DE400129EFE /* circle_button_pressed@2x.png */; };
-		BAD93C9517287DE400129EFE /* circle_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93C9317287DE400129EFE /* circle_button@2x.png */; };
 		BAD93C98172880DC00129EFE /* ButtonNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD93C97172880DC00129EFE /* ButtonNavigationView.m */; };
 		BAD93C9D172886A700129EFE /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD93C9A172886A700129EFE /* AwesomeMenu.m */; };
 		BAD93C9E172886A700129EFE /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD93C9A172886A700129EFE /* AwesomeMenu.m */; };
@@ -35,10 +38,6 @@
 		BAD93D371728AF8100129EFE /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D281728AF8100129EFE /* bg-addbutton-highlighted.png */; };
 		BAD93D381728AF8100129EFE /* bg-addbutton-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D291728AF8100129EFE /* bg-addbutton-highlighted@2x.png */; };
 		BAD93D391728AF8100129EFE /* bg-addbutton-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D291728AF8100129EFE /* bg-addbutton-highlighted@2x.png */; };
-		BAD93D3A1728AF8100129EFE /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2A1728AF8100129EFE /* bg-addbutton.png */; };
-		BAD93D3B1728AF8100129EFE /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2A1728AF8100129EFE /* bg-addbutton.png */; };
-		BAD93D3C1728AF8100129EFE /* bg-addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2B1728AF8100129EFE /* bg-addbutton@2x.png */; };
-		BAD93D3D1728AF8100129EFE /* bg-addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2B1728AF8100129EFE /* bg-addbutton@2x.png */; };
 		BAD93D3E1728AF8100129EFE /* bg-menuitem-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2C1728AF8100129EFE /* bg-menuitem-highlighted.png */; };
 		BAD93D3F1728AF8100129EFE /* bg-menuitem-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2C1728AF8100129EFE /* bg-menuitem-highlighted.png */; };
 		BAD93D401728AF8100129EFE /* bg-menuitem-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD93D2D1728AF8100129EFE /* bg-menuitem-highlighted@2x.png */; };
@@ -72,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA2F62BD1729960E00D78B45 /* circle_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_button@2x.png"; sourceTree = "<group>"; };
+		BA2F62C11729972A00D78B45 /* bg-addbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-addbutton.png"; path = "../../../../.Trash/bg-addbutton.png"; sourceTree = "<group>"; };
+		BA2F62C21729972A00D78B45 /* bg-addbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-addbutton@2x.png"; path = "../../../../.Trash/bg-addbutton@2x.png"; sourceTree = "<group>"; };
+		BA2F62C51729992000D78B45 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
+		BA2F62C61729992000D78B45 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
 		BAD93C5317287DC000129EFE /* About Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD93C5617287DC000129EFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAD93C5817287DC000129EFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,7 +99,6 @@
 		BAD93C8617287DC000129EFE /* About_MeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = About_MeTests.h; sourceTree = "<group>"; };
 		BAD93C8717287DC000129EFE /* About_MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = About_MeTests.m; sourceTree = "<group>"; };
 		BAD93C9217287DE400129EFE /* circle_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_button_pressed@2x.png"; sourceTree = "<group>"; };
-		BAD93C9317287DE400129EFE /* circle_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_button@2x.png"; sourceTree = "<group>"; };
 		BAD93C96172880DC00129EFE /* ButtonNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonNavigationView.h; sourceTree = "<group>"; };
 		BAD93C97172880DC00129EFE /* ButtonNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonNavigationView.m; sourceTree = "<group>"; };
 		BAD93C99172886A700129EFE /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
@@ -105,8 +108,6 @@
 		BAD93CA11728884700129EFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BAD93D281728AF8100129EFE /* bg-addbutton-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton-highlighted.png"; sourceTree = "<group>"; };
 		BAD93D291728AF8100129EFE /* bg-addbutton-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton-highlighted@2x.png"; sourceTree = "<group>"; };
-		BAD93D2A1728AF8100129EFE /* bg-addbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton.png"; sourceTree = "<group>"; };
-		BAD93D2B1728AF8100129EFE /* bg-addbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton@2x.png"; sourceTree = "<group>"; };
 		BAD93D2C1728AF8100129EFE /* bg-menuitem-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem-highlighted.png"; sourceTree = "<group>"; };
 		BAD93D2D1728AF8100129EFE /* bg-menuitem-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem-highlighted@2x.png"; sourceTree = "<group>"; };
 		BAD93D2E1728AF8100129EFE /* bg-menuitem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem.png"; sourceTree = "<group>"; };
@@ -188,6 +189,8 @@
 				BAD93C6E17287DC000129EFE /* MainStoryboard.storyboard */,
 				BAD93C7117287DC000129EFE /* ViewController.h */,
 				BAD93C7217287DC000129EFE /* ViewController.m */,
+				BA2F62C51729992000D78B45 /* AboutMeViewController.h */,
+				BA2F62C61729992000D78B45 /* AboutMeViewController.m */,
 				BAD93C96172880DC00129EFE /* ButtonNavigationView.h */,
 				BAD93C97172880DC00129EFE /* ButtonNavigationView.m */,
 				BAD93C5D17287DC000129EFE /* Supporting Files */,
@@ -231,12 +234,12 @@
 		BAD93C9117287DCA00129EFE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BA2F62BD1729960E00D78B45 /* circle_button@2x.png */,
 				BAD93C9217287DE400129EFE /* circle_button_pressed@2x.png */,
-				BAD93C9317287DE400129EFE /* circle_button@2x.png */,
 				BAD93D281728AF8100129EFE /* bg-addbutton-highlighted.png */,
 				BAD93D291728AF8100129EFE /* bg-addbutton-highlighted@2x.png */,
-				BAD93D2A1728AF8100129EFE /* bg-addbutton.png */,
-				BAD93D2B1728AF8100129EFE /* bg-addbutton@2x.png */,
+				BA2F62C11729972A00D78B45 /* bg-addbutton.png */,
+				BA2F62C21729972A00D78B45 /* bg-addbutton@2x.png */,
 				BAD93D2C1728AF8100129EFE /* bg-menuitem-highlighted.png */,
 				BAD93D2D1728AF8100129EFE /* bg-menuitem-highlighted@2x.png */,
 				BAD93D2E1728AF8100129EFE /* bg-menuitem.png */,
@@ -328,11 +331,8 @@
 				BAD93C6D17287DC000129EFE /* Default-568h@2x.png in Resources */,
 				BAD93C7017287DC000129EFE /* MainStoryboard.storyboard in Resources */,
 				BAD93C9417287DE400129EFE /* circle_button_pressed@2x.png in Resources */,
-				BAD93C9517287DE400129EFE /* circle_button@2x.png in Resources */,
 				BAD93D361728AF8100129EFE /* bg-addbutton-highlighted.png in Resources */,
 				BAD93D381728AF8100129EFE /* bg-addbutton-highlighted@2x.png in Resources */,
-				BAD93D3A1728AF8100129EFE /* bg-addbutton.png in Resources */,
-				BAD93D3C1728AF8100129EFE /* bg-addbutton@2x.png in Resources */,
 				BAD93D3E1728AF8100129EFE /* bg-menuitem-highlighted.png in Resources */,
 				BAD93D401728AF8100129EFE /* bg-menuitem-highlighted@2x.png in Resources */,
 				BAD93D421728AF8100129EFE /* bg-menuitem.png in Resources */,
@@ -343,6 +343,9 @@
 				BAD93D4C1728AF8100129EFE /* icon-plus@2x.png in Resources */,
 				BAD93D4E1728AF8100129EFE /* icon-star.png in Resources */,
 				BAD93D501728AF8100129EFE /* icon-star@2x.png in Resources */,
+				BA2F62BE1729960E00D78B45 /* circle_button@2x.png in Resources */,
+				BA2F62C31729972A00D78B45 /* bg-addbutton.png in Resources */,
+				BA2F62C41729972A00D78B45 /* bg-addbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +356,6 @@
 				BAD93C8517287DC000129EFE /* InfoPlist.strings in Resources */,
 				BAD93D371728AF8100129EFE /* bg-addbutton-highlighted.png in Resources */,
 				BAD93D391728AF8100129EFE /* bg-addbutton-highlighted@2x.png in Resources */,
-				BAD93D3B1728AF8100129EFE /* bg-addbutton.png in Resources */,
-				BAD93D3D1728AF8100129EFE /* bg-addbutton@2x.png in Resources */,
 				BAD93D3F1728AF8100129EFE /* bg-menuitem-highlighted.png in Resources */,
 				BAD93D411728AF8100129EFE /* bg-menuitem-highlighted@2x.png in Resources */,
 				BAD93D431728AF8100129EFE /* bg-menuitem.png in Resources */,
@@ -397,6 +398,7 @@
 				BAD93C98172880DC00129EFE /* ButtonNavigationView.m in Sources */,
 				BAD93C9D172886A700129EFE /* AwesomeMenu.m in Sources */,
 				BAD93C9F172886A700129EFE /* AwesomeMenuItem.m in Sources */,
+				BA2F62C71729992000D78B45 /* AboutMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +581,7 @@
 				BAD93C8D17287DC000129EFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAD93C8E17287DC000129EFE /* Build configuration list for PBXNativeTarget "About MeTests" */ = {
 			isa = XCConfigurationList;
@@ -587,6 +590,7 @@
 				BAD93C9017287DC000129EFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
