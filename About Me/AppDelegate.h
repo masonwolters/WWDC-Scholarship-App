@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AwesomeMenu.h"
+#import "ButtonNavigationView.h"
+#import "ViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

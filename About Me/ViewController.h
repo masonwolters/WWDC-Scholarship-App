@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ButtonNavigationView.h"
+#import "AwesomeMenu.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    ButtonNavigationView *buttonNavView;
+}
 
 @end
