@@ -11,6 +11,7 @@
 		BA2F62C31729972A00D78B45 /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2F62C11729972A00D78B45 /* bg-addbutton.png */; };
 		BA2F62C41729972A00D78B45 /* bg-addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2F62C21729972A00D78B45 /* bg-addbutton@2x.png */; };
 		BA2F62C71729992000D78B45 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2F62C61729992000D78B45 /* AboutMeViewController.m */; };
+		BA5905F01729E60F00E40475 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5905EF1729E60F00E40475 /* NavigationViewController.m */; };
 		BAD93C5717287DC000129EFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD93C5617287DC000129EFE /* UIKit.framework */; };
 		BAD93C5917287DC000129EFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD93C5817287DC000129EFE /* Foundation.framework */; };
 		BAD93C5B17287DC000129EFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD93C5A17287DC000129EFE /* CoreGraphics.framework */; };
@@ -76,6 +77,8 @@
 		BA2F62C21729972A00D78B45 /* bg-addbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-addbutton@2x.png"; path = "../../../../.Trash/bg-addbutton@2x.png"; sourceTree = "<group>"; };
 		BA2F62C51729992000D78B45 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
 		BA2F62C61729992000D78B45 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
+		BA5905EE1729E60F00E40475 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		BA5905EF1729E60F00E40475 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		BAD93C5317287DC000129EFE /* About Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD93C5617287DC000129EFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAD93C5817287DC000129EFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,6 +190,8 @@
 				BAD93C6517287DC000129EFE /* AppDelegate.h */,
 				BAD93C6617287DC000129EFE /* AppDelegate.m */,
 				BAD93C6E17287DC000129EFE /* MainStoryboard.storyboard */,
+				BA5905EE1729E60F00E40475 /* NavigationViewController.h */,
+				BA5905EF1729E60F00E40475 /* NavigationViewController.m */,
 				BAD93C7117287DC000129EFE /* ViewController.h */,
 				BAD93C7217287DC000129EFE /* ViewController.m */,
 				BA2F62C51729992000D78B45 /* AboutMeViewController.h */,
@@ -399,6 +404,7 @@
 				BAD93C9D172886A700129EFE /* AwesomeMenu.m in Sources */,
 				BAD93C9F172886A700129EFE /* AwesomeMenuItem.m in Sources */,
 				BA2F62C71729992000D78B45 /* AboutMeViewController.m in Sources */,
+				BA5905F01729E60F00E40475 /* NavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
