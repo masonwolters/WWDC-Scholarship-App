@@ -14,6 +14,14 @@
 
 @implementation NavigationViewController
 
+#pragma mark - ButtonNavigation Delegate
+
+- (void)didSelectButtonWithIndex:(int)index {
+    
+}
+
+#pragma mark - UIViewController Methods
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,7 +35,8 @@
 {
     [super viewDidLoad];
     
-    ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -200, self.view.frame.size.width, self.view.frame.size.height)];
+    ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height/2 + heightOfButton/2, self.view.frame.size.width, self.view.frame.size.height)];
+    buttonNav.delegate = self;
     [self.view addSubview:buttonNav];
     
 

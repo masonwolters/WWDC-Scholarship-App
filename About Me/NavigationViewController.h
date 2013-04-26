@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ButtonNavigationView.h"
 
-@interface NavigationViewController : UINavigationController
+@interface NavigationViewController : UINavigationController <ButtonNavigationViewDelegate>
 
 @end
