@@ -45,7 +45,7 @@
     buttonNavView = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height/2 + heightOfButton/2, self.view.frame.size.width, self.view.frame.size.height)];
     buttonNavView.delegate = self;
     buttonNavView.transform = CGAffineTransformMakeScale(.5, .5);
-    [self.view.window addSubview:buttonNavView];
+    [self.view addSubview:buttonNavView];
 
     UIView *test = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1500, 1500)];
     test.backgroundColor = [UIColor blueColor];

@@ -27,8 +27,10 @@
 {
     [super viewDidLoad];
     
-    ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:self.view.frame];
+    ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -200, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:buttonNav];
+    
+
     
 	// Do any additional setup after loading the view.
 }

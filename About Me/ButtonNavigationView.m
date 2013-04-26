@@ -38,7 +38,7 @@
 - (void)AwesomeMenuDidStartOpening:(AwesomeMenu *)menu {
     [UIView animateWithDuration:.2 animations:^{
         
-        CGAffineTransform translate = CGAffineTransformMakeTranslation(0, 150);
+        CGAffineTransform translate = CGAffineTransformMakeTranslation(0, self.frame.size.height/2 - heightOfButton/2);
         CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
         self.transform = CGAffineTransformConcat(translate, scale);
     }];
