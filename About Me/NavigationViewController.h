@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "ButtonNavigationView.h"
+#import "AboutMeViewController.h"
+#import "TechSkillsViewController.h"
+#import "EducationViewController.h"
+#import "ProfessionalViewController.h"
+#import "ProjectsViewController.h"
+#import "FutureViewController.h"
 
-@interface NavigationViewController : UINavigationController <ButtonNavigationViewDelegate>
+#define indexOfTechSkills 0
+#define indexOfEducation 1
+#define indexOfFuture 2
+#define indexOfProjects 3
+#define indexOfProfessional 4
+
+@interface NavigationViewController : UINavigationController <ButtonNavigationViewDelegate> {
+    
+}
+
+@property (strong, nonatomic) UIView *contentView;
 
 @end

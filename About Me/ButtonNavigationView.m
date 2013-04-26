@@ -31,20 +31,28 @@
 #pragma mark - AwesomeMenu Delegate
 
 - (void)AwesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
+    buttonDown = NO;
     [self performSelector:@selector(transformUp) withObject:nil afterDelay:.2];
     [delegate didSelectButtonWithIndex:idx];
 }
 
 - (void)AwesomeMenuDidStartOpening:(AwesomeMenu *)menu {
-    [UIView animateWithDuration:.2 animations:^{
-        CGAffineTransform translate = CGAffineTransformMakeTranslation(0, 2*(self.frame.size.height/2) - heightOfButton/2);
-        CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
-        self.transform = CGAffineTransformConcat(translate, scale);
-    }];
+    if (buttonDown) {
+        [self performSelector:@selector(transformUp) withObject:nil afterDelay:.5];
+        buttonDown = NO;
+    } else {
+        [UIView animateWithDuration:.2 animations:^{
+            CGAffineTransform translate = CGAffineTransformMakeTranslation(0, 2*(self.frame.size.height/2) - heightOfButton/2);
+            CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
+            self.transform = CGAffineTransformConcat(translate, scale);
+        }];
+        buttonDown = YES;
+    }
+    
 }
 
 - (void)AwesomeMenuDidStartClosing:(AwesomeMenu *)menu {
-    
+    buttonDown = NO;
     [self performSelector:@selector(transformUp) withObject:nil afterDelay:.5];
 }
 
@@ -74,9 +82,10 @@
 //    
 //    buttons = [NSMutableArray array];
     
+    //self.backgroundColor = [UIColor blueColor];
     
     //AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_me.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_me.png"] ContentImage:nil highlightedContentImage:nil];
-    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_tech.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed.png_tech"] ContentImage:nil highlightedContentImage:nil];
+    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_tech.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_tech.png"] ContentImage:nil highlightedContentImage:nil];
     AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_education.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_education.png"] ContentImage:nil highlightedContentImage:nil];
     AwesomeMenuItem *item4 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_future.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_future.png"] ContentImage:nil highlightedContentImage:nil];
     AwesomeMenuItem *item5 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_projects.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_projects.png"] ContentImage:nil highlightedContentImage:nil];
@@ -97,9 +106,9 @@
     NSArray *menus = [NSArray arrayWithObjects:item2, item3, item4, item5, item6, nil];
     //NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, nil];
     
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:CGRectMake(100, 100, 320, 200) menus:menus];
+    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.bounds menus:menus];
     
-    menu.startPoint = CGPointMake(60, 150);
+    menu.startPoint = CGPointMake(160, 240);
     menu.delegate = self;
     [self addSubview:menu];
     

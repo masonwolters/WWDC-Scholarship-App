@@ -1,32 +1,24 @@
 //
-//  AboutMeViewController.m
+//  ProjectsViewController.m
 //  About Me
 //
-//  Created by Mason Wolters on 4/25/13.
+//  Created by Mason Wolters on 4/26/13.
 //  Copyright (c) 2013 Big Head Apps. All rights reserved.
 //
 
-#import "AboutMeViewController.h"
+#import "ProjectsViewController.h"
 
-@interface AboutMeViewController ()
+@interface ProjectsViewController ()
 
 @end
 
-@implementation AboutMeViewController
+@implementation ProjectsViewController
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super init];
     
     self.view.frame = frame;
-    self.view.backgroundColor = [UIColor orangeColor];
-    
-    return self;
-}
-
-- (id)init {
-    self = [super init];
-    
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor grayColor];
     
     return self;
 }

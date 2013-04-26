@@ -1,32 +1,24 @@
 //
-//  AboutMeViewController.m
+//  ProfessionalViewController.m
 //  About Me
 //
-//  Created by Mason Wolters on 4/25/13.
+//  Created by Mason Wolters on 4/26/13.
 //  Copyright (c) 2013 Big Head Apps. All rights reserved.
 //
 
-#import "AboutMeViewController.h"
+#import "ProfessionalViewController.h"
 
-@interface AboutMeViewController ()
+@interface ProfessionalViewController ()
 
 @end
 
-@implementation AboutMeViewController
+@implementation ProfessionalViewController
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super init];
     
     self.view.frame = frame;
-    self.view.backgroundColor = [UIColor orangeColor];
-    
-    return self;
-}
-
-- (id)init {
-    self = [super init];
-    
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor greenColor];
     
     return self;
 }

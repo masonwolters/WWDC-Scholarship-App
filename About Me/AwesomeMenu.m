@@ -255,10 +255,14 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     _expanding = expanding;    
     
     // rotate add button
-    float angle = self.isExpanding ? -M_PI_4 : 0.0f;
-    [UIView animateWithDuration:0.2f animations:^{
-        _addButton.transform = CGAffineTransformMakeRotation(angle);
-    }];
+//    float angle = self.isExpanding ? M_PI : M_PI;
+//    [UIView animateWithDuration:0.1f animations:^{
+//        _addButton.transform = CGAffineTransformMakeRotation(angle);
+//    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:0.1f animations:^{
+//            _addButton.transform = CGAffineTransformMakeRotation(angle * 2);
+//        }];
+//    }];
     
     // expand or close animation
     if (!_timer) 

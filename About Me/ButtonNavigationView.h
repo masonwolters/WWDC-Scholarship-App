@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AwesomeMenu.h"
 
-#define heightOfButton 70
+#define heightOfButton 85
 #define numberOfButtons 6
 
 @protocol ButtonNavigationViewDelegate <NSObject>
