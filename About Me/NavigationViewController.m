@@ -77,10 +77,12 @@
     [self.view addSubview:contentView];
     
     NSLog(@"frame height: %f y: %f", self.view.frame.size.height, self.view.frame.origin.y);
-    ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height/2 + heightOfButton/2/2 + 20, self.view.frame.size.width, self.view.frame.size.height)];
-    //ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -100, self.view.frame.size.width, self.view.frame.size.height)];
+    //ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:CGRectMake(0, -1 * self.view.frame.size.height/2 + heightOfButton/2/2 + 20, self.view.frame.size.width, self.view.frame.size.height)];
+    ButtonNavigationView *buttonNav = [[ButtonNavigationView alloc] initWithFrame:self.view.bounds];
     buttonNav.delegate = self;
-    buttonNav.transform = CGAffineTransformMakeScale(.5, .5);
+    //buttonNav.center = CGPointMake(self.view.center.x, 22 +20);
+    buttonNav.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(scaleAmount, scaleAmount), CGAffineTransformMakeTranslation(0, -1 * self.view.frame.size.height/2 + heightOfButton/2/2 + 20));
+    //buttonNav.transform = CGAffineTransformMakeScale(.5, .5);
     [self.view addSubview:buttonNav];
     
 

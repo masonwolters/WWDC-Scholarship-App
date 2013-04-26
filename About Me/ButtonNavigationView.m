@@ -37,15 +37,12 @@
 }
 
 - (void)AwesomeMenuDidStartOpening:(AwesomeMenu *)menu {
+
     if (buttonDown) {
         [self performSelector:@selector(transformUp) withObject:nil afterDelay:.5];
         buttonDown = NO;
     } else {
-        [UIView animateWithDuration:.2 animations:^{
-            CGAffineTransform translate = CGAffineTransformMakeTranslation(0, 2*(self.frame.size.height/2) - heightOfButton/2);
-            CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
-            self.transform = CGAffineTransformConcat(translate, scale);
-        }];
+        [self transformDown];
         buttonDown = YES;
     }
     
@@ -62,10 +59,20 @@
 
 - (void)transformUp {
     [UIView animateWithDuration:.2 animations:^{
+        CGAffineTransform translate = CGAffineTransformMakeTranslation(0, -1 * self.frame.size.height/2 + heightOfButton/2/2 + 20);
+        CGAffineTransform scale = CGAffineTransformMakeScale(scaleAmount, scaleAmount);
+        self.transform = CGAffineTransformConcat(scale, translate);
+        //self.transform = translate;
+    }];
+}
+
+- (void)transformDown {
+    [UIView animateWithDuration:.2 animations:^{
         CGAffineTransform translate = CGAffineTransformMakeTranslation(0, 0);
-        CGAffineTransform scale = CGAffineTransformMakeScale(.5, .5);
+        CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
         self.transform = CGAffineTransformConcat(translate, scale);
     }];
+    
 }
 
 #pragma mark - UIViewController Methods
@@ -108,9 +115,14 @@
     
     AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.bounds menus:menus];
     
-    menu.startPoint = CGPointMake(160, 240);
+    menu.startPoint = self.center;
     menu.delegate = self;
     [self addSubview:menu];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    view.center = self.center;
+    view.backgroundColor = [UIColor orangeColor];
+    //[self addSubview:view];
     
     return self;
 }
