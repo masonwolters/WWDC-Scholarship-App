@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScrollAnimateViewController.h"
 
-@interface FutureViewController : UIViewController
+@interface FutureViewController : ScrollAnimateViewController
 
 - (id)initWithFrame:(CGRect)frame;
 

@@ -26,11 +26,31 @@
 //    [self.window addSubview:buttonView];
 //    [self.window makeKeyAndVisible];
     
+    [[UINavigationBar appearance] setBackgroundImage:[self drawImageForNavBar] forBarMetrics:UIBarMetricsDefault];
 
 
 
     
     return YES;
+}
+
+- (UIImage*)drawImageForNavBar {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(320, 44), NO, 0);
+    UIColor *colorFlat = UIColorFromRGB(0x3e454c);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [colorFlat CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, 320, 44));
+    
+    
+    UIImage *texture = [UIImage imageNamed:@"noise_texture.png"];
+    [texture drawAtPoint:CGPointMake(0, 0) blendMode:kCGBlendModeOverlay alpha:.5f];
+    
+    
+    UIImage *output = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return output;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -28,12 +28,75 @@
     }
 }
 
+#pragma mark - Private Methods
+
+-(void)delegateUnDim {
+    [delegate shouldUnDim];
+}
+
+- (void)switchCenterButtonWithIndex:(int)index {
+    CGPoint pointOfOutsideButton = [menu.menusArray[index] endPoint];
+    CGPoint pointOfMiddleButton = menu._addButton.center;
+    [UIView animateWithDuration:.2 animations:^{
+        [menu.menusArray[index] setCenter:pointOfMiddleButton];
+        menu._addButton.center = pointOfOutsideButton;
+    } completion:^(BOOL finished) {
+        //menu._addButton = menu.menusArray[index];
+        //[menu.menusArray replaceObjectAtIndex:index withObject:menu._addButton];
+    }];
+}
+
 #pragma mark - AwesomeMenu Delegate
 
-- (void)AwesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
+- (void)AwesomeMenu:(AwesomeMenu *)menu1 didSelectIndex:(NSInteger)idx {
     buttonDown = NO;
     [self performSelector:@selector(transformUp) withObject:nil afterDelay:.2];
+    [delegate shouldUnDim];
     [delegate didSelectButtonWithIndex:idx];
+    
+    if (idx == indexOfEducation) {
+        menu._addButton.image = [UIImage imageNamed:@"circle_button_education.png"];
+        menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_education.png"];
+    } else if (idx == indexOfFuture) {
+        menu._addButton.image = [UIImage imageNamed:@"circle_button_future.png"];
+        menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_future.png"];
+    } else if (idx == indexOfProfessional) {
+        menu._addButton.image = [UIImage imageNamed:@"circle_button_professional.png"];
+        menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_professional.png"];
+    } else if (idx == indexOfProjects) {
+        menu._addButton.image = [UIImage imageNamed:@"circle_button_projects.png"];
+        menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_projects.png"];
+    } else if (idx == indexOfTechSkills) {
+        menu._addButton.image = [UIImage imageNamed:@"circle_button_tech.png"];
+        menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_tech.png"];
+    }
+    
+    //[self switchCenterButtonWithIndex:idx];
+    CATransition *transition = [CATransition animation];
+    transition.duration = .4f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade;
+    
+    [menu._addButton.layer addAnimation:transition forKey:nil];
+    
+//    NSMutableArray *newMenus = [NSMutableArray arrayWithArray:menu.menusArray];
+//    if (![menu.menusArray containsObject:meItem]) {
+//        [newMenus replaceObjectAtIndex:idx withObject:meItem];
+//
+//    } else if (![menu.menusArray containsObject:futureItem]) {
+//        [newMenus replaceObjectAtIndex:idx withObject:futureItem];
+//    } else if (![menu.menusArray containsObject:projectsItem]) {
+//        [newMenus replaceObjectAtIndex:idx withObject:projectsItem];
+//    } else if (![menu.menusArray containsObject:professionalItem]) {
+//        [newMenus replaceObjectAtIndex:idx withObject:professionalItem];
+//    } else if (![menu.menusArray containsObject:educationItem]) {
+//        [newMenus replaceObjectAtIndex:idx withObject:educationItem];
+//    } else if (![menu.menusArray containsObject:techItem]) {
+//        [newMenus replaceObjectAtIndex:idx withObject:techItem];
+//    }
+//    
+//    [menu setMenusArray:newMenus];
+    
 }
 
 - (void)AwesomeMenuDidStartOpening:(AwesomeMenu *)menu {
@@ -41,8 +104,10 @@
     if (buttonDown) {
         [self performSelector:@selector(transformUp) withObject:nil afterDelay:.5];
         buttonDown = NO;
+        [delegate shouldUnDim];
     } else {
         [self transformDown];
+        [delegate shouldDim];
         buttonDown = YES;
     }
     
@@ -50,6 +115,7 @@
 
 - (void)AwesomeMenuDidStartClosing:(AwesomeMenu *)menu {
     buttonDown = NO;
+    [self performSelector:@selector(delegateUnDim) withObject:nil afterDelay:.5];
     [self performSelector:@selector(transformUp) withObject:nil afterDelay:.5];
 }
 
@@ -59,7 +125,8 @@
 
 - (void)transformUp {
     [UIView animateWithDuration:.2 animations:^{
-        CGAffineTransform translate = CGAffineTransformMakeTranslation(0, -1 * self.frame.size.height/2 + heightOfButton/2/2 + 20);
+        CGAffineTransform translate = CGAffineTransformMakeTranslation(0, -1 * self.frame.size.height + heightOfButton/2 + 20);
+        menu.startPoint = CGPointMake(self.center.x, self.frame.size.height - 43);
         CGAffineTransform scale = CGAffineTransformMakeScale(scaleAmount, scaleAmount);
         self.transform = CGAffineTransformConcat(scale, translate);
         //self.transform = translate;
@@ -67,12 +134,33 @@
 }
 
 - (void)transformDown {
+
     [UIView animateWithDuration:.2 animations:^{
         CGAffineTransform translate = CGAffineTransformMakeTranslation(0, 0);
+        menu.startPoint = CGPointMake(self.center.x, self.superview.frame.size.height/2);
         CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
         self.transform = CGAffineTransformConcat(translate, scale);
     }];
+
+
     
+//    CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+//    positionAnimation.duration = 0.5f;
+//    positionAnimation.removedOnCompletion = NO;
+//    CGMutablePathRef path = CGPathCreateMutable();
+//    CGPoint startPoint = CGPointMake(self.center.x, self.superview.frame.size.height - 43);
+//    CGPoint farPoint = CGPointMake(self.center.x, self.superview.frame.size.height/2 - 20);
+//    CGPoint nearPoint = CGPointMake(self.center.x, self.superview.frame.size.height/2 - 10);
+//    CGPoint endPoint = CGPointMake(self.center.x, self.superview.frame.size.height/2);
+//    CGPathMoveToPoint(path, NULL, startPoint.x, startPoint.y);
+//    CGPathAddLineToPoint(path, NULL, farPoint.x, farPoint.y);
+//    CGPathAddLineToPoint(path, NULL, nearPoint.x, nearPoint.y);
+//    CGPathAddLineToPoint(path, NULL, endPoint.x, endPoint.y);
+//    positionAnimation.path = path;
+//    positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    CGPathRelease(path);
+//    
+//    [menu.layer addAnimation:positionAnimation forKey:@"position"];
 }
 
 #pragma mark - UIViewController Methods
@@ -92,12 +180,14 @@
     //self.backgroundColor = [UIColor blueColor];
     
     //AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_me.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_me.png"] ContentImage:nil highlightedContentImage:nil];
-    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_tech.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_tech.png"] ContentImage:nil highlightedContentImage:nil];
-    AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_education.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_education.png"] ContentImage:nil highlightedContentImage:nil];
-    AwesomeMenuItem *item4 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_future.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_future.png"] ContentImage:nil highlightedContentImage:nil];
-    AwesomeMenuItem *item5 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_projects.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_projects.png"] ContentImage:nil highlightedContentImage:nil];
-    AwesomeMenuItem *item6 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_professional.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_professional.png"] ContentImage:nil highlightedContentImage:nil];
-
+    techItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_tech.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_tech.png"] ContentImage:nil highlightedContentImage:nil];
+    educationItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_education.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_education.png"] ContentImage:nil highlightedContentImage:nil];
+    futureItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_future.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_future.png"] ContentImage:nil highlightedContentImage:nil];
+    projectsItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_projects.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_projects.png"] ContentImage:nil highlightedContentImage:nil];
+    professionalItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_professional.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_professional.png"] ContentImage:nil highlightedContentImage:nil];
+    
+    meItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_me.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_me.png"] ContentImage:nil highlightedContentImage:nil];
+    
 //    UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
 //    UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
 //    UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
@@ -110,19 +200,18 @@
 //                                                               ContentImage:starImage
 //                                                    highlightedContentImage:nil];
     
-    NSArray *menus = [NSArray arrayWithObjects:item2, item3, item4, item5, item6, nil];
+    NSArray *menus = [NSArray arrayWithObjects:meItem, techItem, educationItem, futureItem, projectsItem, professionalItem, nil];
     //NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, nil];
     
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.bounds menus:menus];
+    menu = [[AwesomeMenu alloc] initWithFrame:self.bounds menus:menus];
     
-    menu.startPoint = self.center;
+    menu.startPoint = CGPointMake(self.center.x, self.frame.size.height - 43);
     menu.delegate = self;
     [self addSubview:menu];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     view.center = self.center;
     view.backgroundColor = [UIColor orangeColor];
-    //[self addSubview:view];
     
     return self;
 }

@@ -14,11 +14,22 @@
 
 @implementation EducationViewController
 
+#pragma mark - Private Methods
+
+- (void)setupAnimationItems {
+    TitleAnimateItem *titleItem = [[TitleAnimateItem alloc] initWithTitle:@"Education"];
+    [self setAnimateItems:[NSArray arrayWithObjects:titleItem, nil]];
+}
+
+#pragma mark - UIViewController Methods
+
 - (id)initWithFrame:(CGRect)frame {
-    self = [super init];
+    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1000)];
     
     self.view.frame = frame;
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupAnimationItems];
     
     return self;
 }
@@ -36,6 +47,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning

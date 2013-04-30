@@ -14,11 +14,25 @@
 
 @implementation TechSkillsViewController
 
+#pragma mark - Handle Events
+
+
+
+#pragma mark - Private Methods
+
+- (void)setupAnimationItems {
+    
+}
+
+#pragma mark - ViewController Methods
+
 - (id)initWithFrame:(CGRect)frame {
-    self = [super init];
+    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1000)];
     
     self.view.frame = frame;
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupAnimationItems];
     
     return self;
 }
@@ -35,7 +49,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// Do any additional setup after loading the view. 
+        
 }
 
 - (void)didReceiveMemoryWarning

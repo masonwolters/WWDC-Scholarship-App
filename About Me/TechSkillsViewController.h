@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScrollAnimateViewController.h"
 
-@interface TechSkillsViewController : UIViewController
+@interface TechSkillsViewController : ScrollAnimateViewController
 
 - (id)initWithFrame:(CGRect)frame;
 

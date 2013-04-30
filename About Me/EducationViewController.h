@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScrollAnimateViewController.h"
+#import "TitleAnimateItem.h"
 
-@interface EducationViewController : UIViewController
+@interface EducationViewController : ScrollAnimateViewController
 
 - (id)initWithFrame:(CGRect)frame;
 

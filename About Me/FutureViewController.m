@@ -14,8 +14,16 @@
 
 @implementation FutureViewController
 
+#pragma mark - Private Methods
+
+- (void)setupAnimationItems {
+    
+}
+
+#pragma mark - UIViewController Methods
+
 - (id)initWithFrame:(CGRect)frame {
-    self = [super init];
+    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1000)];
     
     self.view.frame = frame;
     self.view.backgroundColor = [UIColor blueColor];

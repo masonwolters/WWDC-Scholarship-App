@@ -14,17 +14,17 @@
 #import "ProfessionalViewController.h"
 #import "ProjectsViewController.h"
 #import "FutureViewController.h"
+#import "SKBounceAnimation.h"
+#import "TimelineView.h"
+#import "ScrollAnimateItem.h"
 
-#define indexOfTechSkills 0
-#define indexOfEducation 1
-#define indexOfFuture 2
-#define indexOfProjects 3
-#define indexOfProfessional 4
+
 
 @interface NavigationViewController : UINavigationController <ButtonNavigationViewDelegate> {
-    
+    ButtonNavigationView *buttonNavView;
 }
 
 @property (strong, nonatomic) UIView *contentView;
+@property (strong, nonatomic) UIView *dimmingView;
 
 @end

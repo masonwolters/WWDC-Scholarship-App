@@ -43,6 +43,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 @synthesize expanding = _expanding;
 @synthesize delegate = _delegate;
 @synthesize menusArray = _menusArray;
+@synthesize _addButton;
 
 #pragma mark - initialization & cleaning up
 - (id)initWithFrame:(CGRect)frame menus:(NSArray *)aMenusArray
@@ -61,7 +62,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         self.expandRotation = kAwesomeMenuDefaultExpandRotation;
         self.closeRotation = kAwesomeMenuDefaultCloseRotation;
         
-        self.menusArray = aMenusArray;
+        self.menusArray = [NSMutableArray arrayWithArray:aMenusArray];
         
         // add the "Add" Button.
 //        _addButton = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
@@ -188,6 +189,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 
         otherItem.center = otherItem.startPoint;
     }
+
     _expanding = NO;
     
     // rotate "add" button
@@ -304,7 +306,8 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     CGPathMoveToPoint(path, NULL, item.startPoint.x, item.startPoint.y);
     CGPathAddLineToPoint(path, NULL, item.farPoint.x, item.farPoint.y);
     CGPathAddLineToPoint(path, NULL, item.nearPoint.x, item.nearPoint.y); 
-    CGPathAddLineToPoint(path, NULL, item.endPoint.x, item.endPoint.y); 
+    CGPathAddLineToPoint(path, NULL, item.endPoint.x, item.endPoint.y);
+    //NSLog(@"start point: (%f, %f); far point: (%f, %f); near point: (%f, %f); end point: (%f, %f)", item.startPoint.x, item.startPoint.y, item.farPoint.x, item.farPoint.y, item.nearPoint.x, item.nearPoint.y, item.endPoint.x, item.endPoint.y);
     positionAnimation.path = path;
     CGPathRelease(path);
     
