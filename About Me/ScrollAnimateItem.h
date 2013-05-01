@@ -12,6 +12,11 @@
 
 @property (strong, nonatomic) UIView *view;
 
+//All these properties are for animating it. It really should be
+//an array of dictionaries that hold the "keyframes" so you can
+//have an unlimited amount. I would redo it that way, but it was
+//quite the time crunch to get this app done and I didn't have time
+
 @property (nonatomic) float startOpacity;
 @property (nonatomic) float startScale;
 @property (nonatomic) CGPoint startPoint;

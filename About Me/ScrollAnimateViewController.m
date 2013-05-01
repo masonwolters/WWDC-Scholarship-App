@@ -158,9 +158,9 @@
 
     }*/
     
+    //this really could be much more optimized if I had more time
     int i = 0;
     for (ScrollAnimateItem *animatingItem in _animateItems) {
-        //do the actual animating
         if (scrollView.contentOffset.y > animatingItem.startScrollPosition && scrollView.contentOffset.y < animatingItem.finishScrollPosition) {
             
             float percentDone = (scrollView.contentOffset.y - animatingItem.startScrollPosition)/(animatingItem.finishScrollPosition - animatingItem.startScrollPosition);
@@ -222,7 +222,6 @@
             animatingItem.view.alpha = animatingItem.startOpacity;
             animatingItem.view.transform = CGAffineTransformFromString([originalTransforms objectAtIndex:i]);
         }
-        
         i++;
         
         if (!isnan(animatingItem.secondStartScrollPosition) && !isnan(animatingItem.secondFinishScrollPosition)) {

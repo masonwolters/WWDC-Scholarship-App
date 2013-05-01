@@ -25,18 +25,9 @@
     
     ScrollAnimateItem *introductionItem = [[ScrollAnimateItem alloc] init];
     introductionItem.view = viewIntroduction;
-    introductionItem.startPoint = CGPointMake(0, 0);
-    introductionItem.finishPoint = CGPointMake(0, 50);
-    introductionItem.startOpacity = 1.0f;
-    introductionItem.finishOpacity = 1.0f;
-    introductionItem.startScale = 1.0f;
-    introductionItem.finishScale = 1.0f;
-    introductionItem.secondFinishScale = .7f;
-    introductionItem.startScrollPosition = 90.0f;
-    introductionItem.finishScrollPosition = 140.0f;
-    introductionItem.secondFinishPoint = CGPointMake(320, 100.0f);
-    introductionItem.secondStartScrollPosition = 140.0f;
-    introductionItem.secondFinishScrollPosition = 190.0f;
+    [introductionItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    [introductionItem addFirstKeyframeForStartScroll:90.0f finish:140.0f opacity:1.0f scale:1.0f point:CGPointMake(0, 50)];
+    [introductionItem addSecondKeyframeForStartScroll:140.0f finish:190.0f opacity:1.0f scale:.7f point:CGPointMake(320, 80)];
     
     UIView *viewInterests = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 200, 100)];
     viewInterests.backgroundColor = [UIColor clearColor];

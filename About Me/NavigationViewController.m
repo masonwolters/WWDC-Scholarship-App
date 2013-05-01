@@ -27,50 +27,9 @@
     }
     
     if (index == indexOfTechSkills) {
-//        TechSkillsViewController *techController = [[TechSkillsViewController alloc] initWithFrame:[self getFrameOfViewControllers]];
-//        [self displayViewControllerAnimated:techController];
+        TechSkillsViewController *techController = [[TechSkillsViewController alloc] initWithFrame:[self getFrameOfViewControllers]];
+        [self displayViewControllerAnimated:techController];
         
-        ScrollAnimateViewController *scrollingController = [[ScrollAnimateViewController alloc] initWithFrame:[self getFrameOfViewControllers] scrollViewContentSize:CGSizeMake(self.view.frame.size.width, 1000)];
-        
-        UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(150, 150, 100, 100)];
-        testView.backgroundColor = [UIColor orangeColor];
-        
-        ScrollAnimateItem *item = [[ScrollAnimateItem alloc] init];
-        item.startScrollPosition = 80.0f;
-        item.finishScrollPosition = 150;
-        item.startOpacity = 0.2f;
-        item.finishOpacity = 1.0f;
-        item.startPoint = CGPointMake(0, 0);
-        item.finishPoint = CGPointMake(0, 150);
-        item.view = testView;
-        
-        UIView *item2View = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 100, 100)];
-        item2View.backgroundColor = [UIColor purpleColor];
-        
-        ScrollAnimateItem *item2 = [[ScrollAnimateItem alloc] init];
-        item2.startScrollPosition = 100.0f;
-        item2.finishScrollPosition = 150.0f;
-        item2.startOpacity = 0.2f;
-        item2.finishOpacity = 1.0f;
-        item2.view = item2View;
-        
-        UIView *item3View = [[UIView alloc] initWithFrame:CGRectMake(180, 200, 150, 150)];
-        item3View.backgroundColor = [UIColor greenColor];
-        
-        ScrollAnimateItem *item3 = [[ScrollAnimateItem alloc] init];
-        item3.startScrollPosition = 100.0f;
-        item3.finishScrollPosition = 150.0f;
-        item3.startOpacity = 0.2f;
-        item3.finishOpacity = 1.0f;
-        item3.startScale = .5f;
-        item3.finishScale = 1.5f;
-
-        item3.view = item3View;
-        
-        [scrollingController setAnimateItems:[NSArray arrayWithObjects:item, item2, item3, nil]];
-                
-        
-        [self displayViewControllerAnimated:scrollingController];
     } else if (index == indexOfEducation) {
         EducationViewController *educationController = [[EducationViewController alloc] initWithFrame:[self getFrameOfViewControllers]];
         [self displayViewControllerAnimated:educationController];
