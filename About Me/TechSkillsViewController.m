@@ -87,6 +87,7 @@
     ScrollAnimateItem *videoItem = [[ScrollAnimateItem alloc] init];
     videoItem.view = videoCard;
     [videoItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    [videoItem addFirstKeyframeForStartScroll:1692 finish:1692+150 opacity:1.0f scale:1.3f point:CGPointMake(0, 110)];
 
     ImageAnimateItem *typographyImage = [[ImageAnimateItem alloc] initWithImageName:@"typography_youtube.png" yPosition:1730.0f width:260.0f];
     [typographyImage setStartingValuesOpacity:0.0f scale:.5f point:CGPointMake(-320, 0)];
@@ -97,6 +98,7 @@
     ImageAnimateItem *templeRunImage = [[ImageAnimateItem alloc] initWithImageName:@"temple_run_youtube.png" yPosition:1900.0f width:260.0f];
     [templeRunImage setStartingValuesOpacity:0.0f scale:.5f point:CGPointMake(320, 0)];
     [templeRunImage addFirstKeyframeForStartScroll:1560.0f finish:1640.0f opacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    [templeRunImage addSecondKeyframeForStartScroll:1692 finish:1692+150 opacity:1.0f scale:1.3f point:CGPointMake(0, 110)];
     [templeRunImage addGestureRecognizerForTempleRunVideo];
     templeRunImage.delegate = self;
     
@@ -108,7 +110,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
     NSLog(@"frame: %f, %f", frame.size.width, frame.size.height);
-    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 2500)];
+    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1668 + self.view.frame.size.height - 20)];
     
     self.view.frame = frame;
     

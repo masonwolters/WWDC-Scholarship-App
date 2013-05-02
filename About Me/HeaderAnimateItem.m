@@ -25,9 +25,10 @@
     textView.layer.zPosition = 1.1f;
     self.view = textView;
     
+    
     [self setStartingValuesOpacity:1.0f scale:.8f point:CGPointMake(0, 0)];
     [self addFirstKeyframeForStartScroll:yPos - 20 finish:yPos - 10 opacity:1.0f scale:1.0f point:CGPointMake(20, 0)];
-    [self addSecondKeyframeForStartScroll:yPos - 10 finish:yPos + 15 opacity:1.0f scale:1.0f point:CGPointMake(20, 25)];
+    [self addSecondKeyframeForStartScroll:yPos - 10 finish:yPos + 30 opacity:1.0f scale:1.0f point:CGPointMake(-160, 40)];
 
     
     return self;
