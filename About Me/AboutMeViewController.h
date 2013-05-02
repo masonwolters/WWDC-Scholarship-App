@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ScrollAnimateViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 
 @interface AboutMeViewController : ScrollAnimateViewController <ImageAnimateItemDelegate>

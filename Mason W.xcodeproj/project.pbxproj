@@ -23,6 +23,9 @@
 		BA59060E172A11CD00E40475 /* circle_button_projects@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA59060A172A11CD00E40475 /* circle_button_projects@2x.png */; };
 		BA590614172A140E00E40475 /* circle_button_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA590613172A140E00E40475 /* circle_button_me@2x.png */; };
 		BA838B4D1730329E006FF08F /* TitleAnimateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA838B4C1730329E006FF08F /* TitleAnimateItem.m */; };
+		BA838B511732CFF4006FF08F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA838B501732CFF4006FF08F /* MediaPlayer.framework */; };
+		BA838B5B1732D4CF006FF08F /* Mason W Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA838B5A1732D4CF006FF08F /* Mason W Icon@2x.png */; };
+		BA838B5D1732D4D3006FF08F /* Mason W Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA838B5C1732D4D3006FF08F /* Mason W Icon.png */; };
 		BABDE0A2172AE5ED00E7DB59 /* TechSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABDE0A1172AE5ED00E7DB59 /* TechSkillsViewController.m */; };
 		BABDE0A5172AE5F600E7DB59 /* EducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABDE0A4172AE5F600E7DB59 /* EducationViewController.m */; };
 		BABDE0A8172AE60900E7DB59 /* ProfessionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABDE0A7172AE60900E7DB59 /* ProfessionalViewController.m */; };
@@ -147,6 +150,9 @@
 		BA590613172A140E00E40475 /* circle_button_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_button_me@2x.png"; sourceTree = "<group>"; };
 		BA838B4B1730329E006FF08F /* TitleAnimateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleAnimateItem.h; sourceTree = "<group>"; };
 		BA838B4C1730329E006FF08F /* TitleAnimateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleAnimateItem.m; sourceTree = "<group>"; };
+		BA838B501732CFF4006FF08F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BA838B5A1732D4CF006FF08F /* Mason W Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mason W Icon@2x.png"; sourceTree = "<group>"; };
+		BA838B5C1732D4D3006FF08F /* Mason W Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mason W Icon.png"; sourceTree = "<group>"; };
 		BABDE0A0172AE5ED00E7DB59 /* TechSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechSkillsViewController.h; sourceTree = "<group>"; };
 		BABDE0A1172AE5ED00E7DB59 /* TechSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechSkillsViewController.m; sourceTree = "<group>"; };
 		BABDE0A3172AE5F600E7DB59 /* EducationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EducationViewController.h; sourceTree = "<group>"; };
@@ -162,23 +168,23 @@
 		BABDE0B9172B398800E7DB59 /* noise_texture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise_texture@2x.png"; sourceTree = "<group>"; };
 		BABDE0BB172B3B9100E7DB59 /* sailing@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sailing@2x.jpg"; sourceTree = "<group>"; };
 		BABDE0BD172B3C8500E7DB59 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		BAD93C5317287DC000129EFE /* About Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD93C5317287DC000129EFE /* Mason W.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mason W.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD93C5617287DC000129EFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAD93C5817287DC000129EFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAD93C5A17287DC000129EFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BAD93C5E17287DC000129EFE /* About Me-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "About Me-Info.plist"; sourceTree = "<group>"; };
+		BAD93C5E17287DC000129EFE /* Mason W-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mason W-Info.plist"; sourceTree = "<group>"; };
 		BAD93C6017287DC000129EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAD93C6217287DC000129EFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BAD93C6417287DC000129EFE /* About Me-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "About Me-Prefix.pch"; sourceTree = "<group>"; };
+		BAD93C6417287DC000129EFE /* Mason W-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mason W-Prefix.pch"; sourceTree = "<group>"; };
 		BAD93C6517287DC000129EFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAD93C6617287DC000129EFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAD93C6817287DC000129EFE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BAD93C6A17287DC000129EFE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BAD93C6C17287DC000129EFE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BAD93C6F17287DC000129EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BAD93C7917287DC000129EFE /* About MeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "About MeTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD93C7917287DC000129EFE /* Mason WTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mason WTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD93C7A17287DC000129EFE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		BAD93C8217287DC000129EFE /* About MeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "About MeTests-Info.plist"; sourceTree = "<group>"; };
+		BAD93C8217287DC000129EFE /* Mason WTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mason WTests-Info.plist"; sourceTree = "<group>"; };
 		BAD93C8417287DC000129EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAD93C8617287DC000129EFE /* About_MeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = About_MeTests.h; sourceTree = "<group>"; };
 		BAD93C8717287DC000129EFE /* About_MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = About_MeTests.m; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA838B511732CFF4006FF08F /* MediaPlayer.framework in Frameworks */,
 				BABDE0BE172B3C8600E7DB59 /* CoreImage.framework in Frameworks */,
 				BAD93CA21728884700129EFE /* QuartzCore.framework in Frameworks */,
 				BAD93C5717287DC000129EFE /* UIKit.framework in Frameworks */,
@@ -307,6 +314,9 @@
 		BAD93C4A17287DC000129EFE = {
 			isa = PBXGroup;
 			children = (
+				BA838B5C1732D4D3006FF08F /* Mason W Icon.png */,
+				BA838B5A1732D4CF006FF08F /* Mason W Icon@2x.png */,
+				BA838B501732CFF4006FF08F /* MediaPlayer.framework */,
 				BABDE0BD172B3C8500E7DB59 /* CoreImage.framework */,
 				BAD93CA11728884700129EFE /* QuartzCore.framework */,
 				BAD93C5C17287DC000129EFE /* About Me */,
@@ -319,8 +329,8 @@
 		BAD93C5417287DC000129EFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BAD93C5317287DC000129EFE /* About Me.app */,
-				BAD93C7917287DC000129EFE /* About MeTests.octest */,
+				BAD93C5317287DC000129EFE /* Mason W.app */,
+				BAD93C7917287DC000129EFE /* Mason WTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,10 +386,10 @@
 		BAD93C5D17287DC000129EFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BAD93C5E17287DC000129EFE /* About Me-Info.plist */,
+				BAD93C5E17287DC000129EFE /* Mason W-Info.plist */,
 				BAD93C5F17287DC000129EFE /* InfoPlist.strings */,
 				BAD93C6217287DC000129EFE /* main.m */,
-				BAD93C6417287DC000129EFE /* About Me-Prefix.pch */,
+				BAD93C6417287DC000129EFE /* Mason W-Prefix.pch */,
 				BAD93C6817287DC000129EFE /* Default.png */,
 				BAD93C6A17287DC000129EFE /* Default@2x.png */,
 				BAD93C6C17287DC000129EFE /* Default-568h@2x.png */,
@@ -400,7 +410,7 @@
 		BAD93C8117287DC000129EFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BAD93C8217287DC000129EFE /* About MeTests-Info.plist */,
+				BAD93C8217287DC000129EFE /* Mason WTests-Info.plist */,
 				BAD93C8317287DC000129EFE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -473,9 +483,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BAD93C5217287DC000129EFE /* About Me */ = {
+		BAD93C5217287DC000129EFE /* Mason W */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAD93C8B17287DC000129EFE /* Build configuration list for PBXNativeTarget "About Me" */;
+			buildConfigurationList = BAD93C8B17287DC000129EFE /* Build configuration list for PBXNativeTarget "Mason W" */;
 			buildPhases = (
 				BAD93C4F17287DC000129EFE /* Sources */,
 				BAD93C5017287DC000129EFE /* Frameworks */,
@@ -485,14 +495,14 @@
 			);
 			dependencies = (
 			);
-			name = "About Me";
+			name = "Mason W";
 			productName = "About Me";
-			productReference = BAD93C5317287DC000129EFE /* About Me.app */;
+			productReference = BAD93C5317287DC000129EFE /* Mason W.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BAD93C7817287DC000129EFE /* About MeTests */ = {
+		BAD93C7817287DC000129EFE /* Mason WTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAD93C8E17287DC000129EFE /* Build configuration list for PBXNativeTarget "About MeTests" */;
+			buildConfigurationList = BAD93C8E17287DC000129EFE /* Build configuration list for PBXNativeTarget "Mason WTests" */;
 			buildPhases = (
 				BAD93C7417287DC000129EFE /* Sources */,
 				BAD93C7517287DC000129EFE /* Frameworks */,
@@ -504,9 +514,9 @@
 			dependencies = (
 				BAD93C7F17287DC000129EFE /* PBXTargetDependency */,
 			);
-			name = "About MeTests";
+			name = "Mason WTests";
 			productName = "About MeTests";
-			productReference = BAD93C7917287DC000129EFE /* About MeTests.octest */;
+			productReference = BAD93C7917287DC000129EFE /* Mason WTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -518,7 +528,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Big Head Apps";
 			};
-			buildConfigurationList = BAD93C4E17287DC000129EFE /* Build configuration list for PBXProject "About Me" */;
+			buildConfigurationList = BAD93C4E17287DC000129EFE /* Build configuration list for PBXProject "Mason W" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -530,8 +540,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BAD93C5217287DC000129EFE /* About Me */,
-				BAD93C7817287DC000129EFE /* About MeTests */,
+				BAD93C5217287DC000129EFE /* Mason W */,
+				BAD93C7817287DC000129EFE /* Mason WTests */,
 			);
 		};
 /* End PBXProject section */
@@ -604,6 +614,8 @@
 				BADA2C9D17320E6A00CF0CEB /* circle_button_expand@2x.png in Resources */,
 				BADA2C9E17320E6A00CF0CEB /* circle_button_pressed_expand@2x.png in Resources */,
 				BADA2CA31732149800CF0CEB /* alex@2x.png in Resources */,
+				BA838B5B1732D4CF006FF08F /* Mason W Icon@2x.png in Resources */,
+				BA838B5D1732D4D3006FF08F /* Mason W Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +701,7 @@
 /* Begin PBXTargetDependency section */
 		BAD93C7F17287DC000129EFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BAD93C5217287DC000129EFE /* About Me */;
+			target = BAD93C5217287DC000129EFE /* Mason W */;
 			targetProxy = BAD93C7E17287DC000129EFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -782,10 +794,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "About Me/About Me-Prefix.pch";
-				INFOPLIST_FILE = "About Me/About Me-Info.plist";
+				GCC_PREFIX_HEADER = "About Me/Mason W-Prefix.pch";
+				INFOPLIST_FILE = "About Me/Mason W-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mason W";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -795,10 +807,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "About Me/About Me-Prefix.pch";
-				INFOPLIST_FILE = "About Me/About Me-Info.plist";
+				GCC_PREFIX_HEADER = "About Me/Mason W-Prefix.pch";
+				INFOPLIST_FILE = "About Me/Mason W-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mason W";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -814,8 +826,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "About Me/About Me-Prefix.pch";
-				INFOPLIST_FILE = "About MeTests/About MeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "About MeTests/Mason WTests-Info.plist";
+				PRODUCT_NAME = "Mason WTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -831,8 +843,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "About Me/About Me-Prefix.pch";
-				INFOPLIST_FILE = "About MeTests/About MeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "About MeTests/Mason WTests-Info.plist";
+				PRODUCT_NAME = "Mason WTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -841,7 +853,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BAD93C4E17287DC000129EFE /* Build configuration list for PBXProject "About Me" */ = {
+		BAD93C4E17287DC000129EFE /* Build configuration list for PBXProject "Mason W" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BAD93C8917287DC000129EFE /* Debug */,
@@ -850,7 +862,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAD93C8B17287DC000129EFE /* Build configuration list for PBXNativeTarget "About Me" */ = {
+		BAD93C8B17287DC000129EFE /* Build configuration list for PBXNativeTarget "Mason W" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BAD93C8C17287DC000129EFE /* Debug */,
@@ -859,7 +871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAD93C8E17287DC000129EFE /* Build configuration list for PBXNativeTarget "About MeTests" */ = {
+		BAD93C8E17287DC000129EFE /* Build configuration list for PBXNativeTarget "Mason WTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BAD93C8F17287DC000129EFE /* Debug */,

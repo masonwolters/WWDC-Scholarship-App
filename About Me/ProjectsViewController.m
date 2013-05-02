@@ -23,7 +23,7 @@
     
     HeaderAnimateItem *pastHeader = [[HeaderAnimateItem alloc] initWithTitle:@"Past Projects" yPosition:60.0f];
     
-    CardView *phpCard = [[CardView alloc] initWithTitle:@"MySQL Database" text:@"This was one of the first PHP projects I did. I designed a MySQL database to hold different fabrics for chairs. I then wrote some PHP to read the database and display the images and names of the different fabrics. You can also sort by manufacturer. It gave the client an easy and efficient way to add new fabrics in the future." frame:CGRectMake(0, pastHeader.yPosition + 50, self.view.frame.size.width, 510) automaticHeight:NO];
+    CardView *phpCard = [[CardView alloc] initWithTitle:@"Fabric Database" text:@"This was one of the first PHP projects I did. I designed a MySQL database to hold different fabrics for chairs. I then wrote some PHP to read the database and display the images and names of the different fabrics. You can also sort by manufacturer. It gave the client an easy and efficient way to add new fabrics in the future." frame:CGRectMake(0, pastHeader.yPosition + 50, self.view.frame.size.width, 510) automaticHeight:NO];
     ScrollAnimateItem *phpItem = [[ScrollAnimateItem alloc] init];
     phpItem.view = phpCard;
     [phpItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
@@ -72,6 +72,7 @@
     ScrollAnimateItem *future2Item = [[ScrollAnimateItem alloc] init];
     future2Item.view = future2Card;
     [future2Item setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    [future2Item addFirstKeyframeForStartScroll:2414 finish:2414+150 opacity:1.0f scale:1.3f point:CGPointMake(0, 110)];
     
     
     [self setAnimateItems:[NSArray arrayWithObjects: title, pastHeader, phpItem, databaseImage, currentHeader, scorerItem, firstScreen, secondScreen, anarchyItem, anarchyImage, futureHeader, futureItem, future2Item, nil]];
@@ -80,7 +81,7 @@
 #pragma mark - UIViewController Methods
 
 - (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 2400 + self.view.frame.size.height - 40)];
+    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 2390 + self.view.frame.size.height - 20)];
     
     self.view.frame = frame;
     self.view.backgroundColor = UIColorFromRGB(backgroundColorHEX);

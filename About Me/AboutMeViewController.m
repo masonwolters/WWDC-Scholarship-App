@@ -21,7 +21,11 @@
 }
 
 - (void)tapWhirlygigVideo {
-    [self showYoutubeVideoWithLink:@"http://www.youtube.com/watch?v=40viX5upSJI"];
+    NSLog(@"tap whirly");
+    NSURL *myURL = [[NSBundle mainBundle] URLForResource:@"Whirlygig_small" withExtension:@"m4v"];
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL: myURL];
+    [self presentMoviePlayerViewControllerAnimated:player];
+    //[self showYoutubeVideoWithLink:@"http://www.youtube.com/watch?v=40viX5upSJI"];
 }
 
 #pragma mark - Private Methods
@@ -99,7 +103,7 @@
     ScrollAnimateItem *moreItem = [[ScrollAnimateItem alloc] init];
     moreItem.view = moreView;
     [moreItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
-    [moreItem addFirstKeyframeForStartScroll:1424 finish:1550 opacity:1.0f scale:1.4f point:CGPointMake(0, 110)];
+    [moreItem addFirstKeyframeForStartScroll:1424 finish:1424+150 opacity:1.0f scale:1.3f point:CGPointMake(0, 140)];
     
     [self setAnimateItems:[NSArray arrayWithObjects: title, introItem, interestsHeader, sailingItem, sailingImage, secondSailingImage, thirdSailingImage, fourthSailingImage, youtubeSailingImage, skiingItem, skiing1, skiing2, skiing3, whirlygigYoutube, moreItem, nil]];
 }
@@ -109,7 +113,7 @@
 #pragma mark -UIViewController Methods
 
 - (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1380 + self.view.frame.size.height)];
+    self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1380+self.view.frame.size.height)];
     
     self.view.frame = frame;
     
