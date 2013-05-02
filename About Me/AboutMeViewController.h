@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ScrollAnimateViewController.h"
-#import "TitleAnimateItem.h"
 
-@interface AboutMeViewController : ScrollAnimateViewController
+
+@interface AboutMeViewController : ScrollAnimateViewController <ImageAnimateItemDelegate>
 
 - (id)initWithFrame:(CGRect)frame;
 

@@ -18,6 +18,26 @@
 
 - (void)setupAnimationItems {
     
+    TitleAnimateItem *title = [[TitleAnimateItem alloc] initWithTitle:@"My Future"];
+    
+    
+    HeaderAnimateItem *collegeHeader = [[HeaderAnimateItem alloc] initWithTitle:@"College" yPosition:60.0f];
+    
+    CardView *collegeCard = [[CardView alloc] initWithTitle:@"Stanford" text:@"Yeah" frame:CGRectMake(0, collegeHeader.yPosition + 50, self.view.frame.size.width, 100) automaticHeight:YES];
+    ScrollAnimateItem *collegeItem = [[ScrollAnimateItem alloc] init];
+    collegeItem.view = collegeCard;
+    [collegeItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    
+    
+    HeaderAnimateItem *afterCollegeHeader = [[HeaderAnimateItem alloc] initWithTitle:@"After College" yPosition:collegeItem.view.frame.origin.y + collegeItem.view.frame.size.height];
+    
+    CardView *afterCollegeCard = [[CardView alloc] initWithTitle:nil text:@"yeah" frame:CGRectMake(0, afterCollegeHeader.yPosition + 50, self.view.frame.size.width, 100) automaticHeight:YES];
+    ScrollAnimateItem *afterCollegeItem = [[ScrollAnimateItem alloc] init];
+    afterCollegeItem.view = afterCollegeCard;
+    [afterCollegeItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    
+    
+    [self setAnimateItems:[NSArray arrayWithObjects: title, collegeHeader, collegeItem, afterCollegeHeader, afterCollegeItem, nil]];
 }
 
 #pragma mark - UIViewController Methods
@@ -26,7 +46,9 @@
     self = [super initWithFrame:frame scrollViewContentSize:CGSizeMake(frame.size.width, 1000)];
     
     self.view.frame = frame;
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = UIColorFromRGB(backgroundColorHEX);
+    
+    [self setupAnimationItems];
     
     return self;
 }

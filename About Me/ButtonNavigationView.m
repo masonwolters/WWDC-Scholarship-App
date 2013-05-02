@@ -46,38 +46,45 @@
     }];
 }
 
-#pragma mark - AwesomeMenu Delegate
-
-- (void)AwesomeMenu:(AwesomeMenu *)menu1 didSelectIndex:(NSInteger)idx {
-    buttonDown = NO;
-    [self performSelector:@selector(transformUp) withObject:nil afterDelay:.2];
-    [delegate shouldUnDim];
-    [delegate didSelectButtonWithIndex:idx];
-    
-    if (idx == indexOfEducation) {
+- (void)setAddButtonImageBasedOnIndex:(int)index {
+    if (index == indexOfEducation) {
         menu._addButton.image = [UIImage imageNamed:@"circle_button_education.png"];
         menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_education.png"];
-    } else if (idx == indexOfFuture) {
+    } else if (index == indexOfFuture) {
         menu._addButton.image = [UIImage imageNamed:@"circle_button_future.png"];
         menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_future.png"];
-    } else if (idx == indexOfProfessional) {
+    } else if (index == indexOfProfessional) {
         menu._addButton.image = [UIImage imageNamed:@"circle_button_professional.png"];
         menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_professional.png"];
-    } else if (idx == indexOfProjects) {
+    } else if (index == indexOfProjects) {
         menu._addButton.image = [UIImage imageNamed:@"circle_button_projects.png"];
         menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_projects.png"];
-    } else if (idx == indexOfTechSkills) {
+    } else if (index == indexOfTechSkills) {
         menu._addButton.image = [UIImage imageNamed:@"circle_button_tech.png"];
         menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_tech.png"];
+    } else if (index == indexOfAboutMe) {
+        menu._addButton.image = [UIImage imageNamed:@"circle_button_me.png"];
+        menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_me.png"];
     }
     
-    //[self switchCenterButtonWithIndex:idx];
     CATransition *transition = [CATransition animation];
-    transition.duration = .4f;
+    transition.duration = .1f;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = kCATransitionFade;
     
     [menu._addButton.layer addAnimation:transition forKey:nil];
+}
+
+#pragma mark - AwesomeMenu Delegate
+
+- (void)AwesomeMenu:(AwesomeMenu *)menu1 didSelectIndex:(NSInteger)idx {
+    buttonDown = NO;
+    selectedIndex = idx;
+
+    [self performSelector:@selector(transformUp) withObject:nil afterDelay:.2];
+    [delegate shouldUnDim];
+    [delegate didSelectButtonWithIndex:idx];
+    
     
 //    NSMutableArray *newMenus = [NSMutableArray arrayWithArray:menu.menusArray];
 //    if (![menu.menusArray containsObject:meItem]) {
@@ -109,6 +116,8 @@
         [self transformDown];
         [delegate shouldDim];
         buttonDown = YES;
+        
+
     }
     
 }
@@ -117,6 +126,7 @@
     buttonDown = NO;
     [self performSelector:@selector(delegateUnDim) withObject:nil afterDelay:.5];
     [self performSelector:@selector(transformUp) withObject:nil afterDelay:.5];
+
 }
 
 - (void)AwesomeMenuDidFinishAnimationOpen:(AwesomeMenu *)menu {
@@ -131,6 +141,9 @@
         self.transform = CGAffineTransformConcat(scale, translate);
         //self.transform = translate;
     }];
+    [self setAddButtonImageBasedOnIndex:selectedIndex];
+
+
 }
 
 - (void)transformDown {
@@ -141,6 +154,16 @@
         CGAffineTransform scale = CGAffineTransformMakeScale(1, 1);
         self.transform = CGAffineTransformConcat(translate, scale);
     }];
+    
+    menu._addButton.image = [UIImage imageNamed:@"circle_button_expand.png"];
+    menu._addButton.highlightedImage = [UIImage imageNamed:@"circle_button_pressed_expand.png"];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = .1f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade;
+    
+    [menu._addButton.layer addAnimation:transition forKey:nil];
 
 
     
@@ -178,7 +201,7 @@
 //    buttons = [NSMutableArray array];
     
     //self.backgroundColor = [UIColor blueColor];
-    
+    selectedIndex = 0;
     //AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_me.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_me.png"] ContentImage:nil highlightedContentImage:nil];
     techItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_tech.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_tech.png"] ContentImage:nil highlightedContentImage:nil];
     educationItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"circle_button_education.png"] highlightedImage:[UIImage imageNamed:@"circle_button_pressed_education.png"] ContentImage:nil highlightedContentImage:nil];

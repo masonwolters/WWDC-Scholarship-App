@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ScrollAnimateItem.h"
+#import "TitleAnimateItem.h"
+#import "CardView.h"
+#import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
+#import "HeaderAnimateItem.h"
+#import "ImageAnimateItem.h"
+#import "WebVideoViewController.h"
 
 @interface ScrollAnimateViewController : UIViewController <UIScrollViewDelegate> {
     NSMutableArray *triggerPoints;
@@ -29,5 +36,7 @@
 @property (strong, nonatomic) NSArray *animateItems;
 
 - (id)initWithFrame:(CGRect)frame scrollViewContentSize:(CGSize)contentSize;
+
+- (void)showYoutubeVideoWithLink:(NSString*)link;
 
 @end

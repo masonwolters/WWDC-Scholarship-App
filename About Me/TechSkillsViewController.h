@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ScrollAnimateViewController.h"
 
-@interface TechSkillsViewController : ScrollAnimateViewController
+@interface TechSkillsViewController : ScrollAnimateViewController <ImageAnimateItemDelegate>
 
 - (id)initWithFrame:(CGRect)frame;
 

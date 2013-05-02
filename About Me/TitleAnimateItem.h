@@ -7,6 +7,7 @@
 //
 
 #import "ScrollAnimateItem.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface TitleAnimateItem : ScrollAnimateItem
 

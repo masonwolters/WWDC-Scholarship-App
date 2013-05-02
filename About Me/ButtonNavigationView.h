@@ -40,6 +40,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     UIButton *navButton;
     BOOL buttonDown;
     NSMutableArray *buttons;
+    int selectedIndex;
     AwesomeMenu *menu;
     
     AwesomeMenuItem *techItem;
