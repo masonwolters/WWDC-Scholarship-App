@@ -81,7 +81,7 @@
     timelapseVideo.delegate = self;
     
     
-    HeaderAnimateItem *videoHeader = [[HeaderAnimateItem alloc] initWithTitle:@"Video Editing" yPosition:timelapseVideo1.view.frame.origin.y + timelapseVideo1.view.frame.size.height];
+    HeaderAnimateItem *videoHeader = [[HeaderAnimateItem alloc] initWithTitle:@"Video Editing" yPosition:timelapseVideo.view.frame.origin.y + timelapseVideo.view.frame.size.height];
 
     CardView *videoCard = [[CardView alloc] initWithTitle:nil text:@"Before I got into iOS development, I spent a lot of my time learning After Effects. I got pretty good, and I could do some pretty cool things with video. This will no doubt come in handy someday when I have to make a promotional video for an app." frame:CGRectMake(0, videoHeader.yPosition + 50, self.view.frame.size.width, 510) automaticHeight:NO];
     ScrollAnimateItem *videoItem = [[ScrollAnimateItem alloc] init];
@@ -101,7 +101,7 @@
     templeRunImage.delegate = self;
     
     
-    [self setAnimateItems:[NSArray arrayWithObjects: introItem, title, iosDev, iosItem, phpHeader, phpItem, roboticsHeader, arduinoItem, timelapseItem, timelapseImage, timelapseVideo1, videoHeader, videoItem, typographyImage, templeRunImage, nil]];
+    [self setAnimateItems:[NSArray arrayWithObjects: introItem, title, iosDev, iosItem, phpHeader, phpItem, roboticsHeader, arduinoItem, timelapseItem, timelapseImage, timelapseVideo, videoHeader, videoItem, typographyImage, templeRunImage, nil]];
 }
 
 #pragma mark - ViewController Methods
