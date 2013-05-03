@@ -26,6 +26,7 @@
 		BA838B511732CFF4006FF08F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA838B501732CFF4006FF08F /* MediaPlayer.framework */; };
 		BA838B5B1732D4CF006FF08F /* Mason W Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA838B5A1732D4CF006FF08F /* Mason W Icon@2x.png */; };
 		BA838B5D1732D4D3006FF08F /* Mason W Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA838B5C1732D4D3006FF08F /* Mason W Icon.png */; };
+		BA838B6117332CCB006FF08F /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA838B6017332CCB006FF08F /* arrow@2x.png */; };
 		BABDE0A2172AE5ED00E7DB59 /* TechSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABDE0A1172AE5ED00E7DB59 /* TechSkillsViewController.m */; };
 		BABDE0A5172AE5F600E7DB59 /* EducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABDE0A4172AE5F600E7DB59 /* EducationViewController.m */; };
 		BABDE0A8172AE60900E7DB59 /* ProfessionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABDE0A7172AE60900E7DB59 /* ProfessionalViewController.m */; };
@@ -153,6 +154,7 @@
 		BA838B501732CFF4006FF08F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		BA838B5A1732D4CF006FF08F /* Mason W Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mason W Icon@2x.png"; sourceTree = "<group>"; };
 		BA838B5C1732D4D3006FF08F /* Mason W Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mason W Icon.png"; sourceTree = "<group>"; };
+		BA838B6017332CCB006FF08F /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		BABDE0A0172AE5ED00E7DB59 /* TechSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechSkillsViewController.h; sourceTree = "<group>"; };
 		BABDE0A1172AE5ED00E7DB59 /* TechSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechSkillsViewController.m; sourceTree = "<group>"; };
 		BABDE0A3172AE5F600E7DB59 /* EducationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EducationViewController.h; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				BADA2CA21732149800CF0CEB /* alex@2x.png */,
+				BA838B6017332CCB006FF08F /* arrow@2x.png */,
 				BADA2C9B17320E6A00CF0CEB /* circle_button_expand@2x.png */,
 				BADA2C9C17320E6A00CF0CEB /* circle_button_pressed_expand@2x.png */,
 				BADA2C9917320C0500CF0CEB /* temple_run_youtube@2x.png */,
@@ -616,6 +619,7 @@
 				BADA2CA31732149800CF0CEB /* alex@2x.png in Resources */,
 				BA838B5B1732D4CF006FF08F /* Mason W Icon@2x.png in Resources */,
 				BA838B5D1732D4D3006FF08F /* Mason W Icon.png in Resources */,
+				BA838B6117332CCB006FF08F /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
