@@ -34,6 +34,13 @@
     
     TitleAnimateItem *title = [[TitleAnimateItem alloc] initWithTitle:@"About Me"];
     
+    UIImageView *arrow = [[UIImageView alloc] initWithFrame:CGRectMake(280, self.view.frame.size.height - 30, 30, 30)];
+    arrow.layer.zPosition = 1.2f;
+    arrow.image = [UIImage imageNamed:@"arrow.png"];
+    ScrollAnimateItem *arrowItem = [[ScrollAnimateItem alloc] init];
+    arrowItem.view = arrow;
+    [arrowItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
+    [arrowItem addFirstKeyframeForStartScroll:0.0f finish:20.0f opacity:0.0f scale:1.3f point:CGPointMake(0, 0)];
     
     CardView *intro = [[CardView alloc] initWithTitle:nil text:@"My name is Mason Wolters, and I'm an eleventh grade student at Spring Lake High School in Spring Lake, Michigan." frame:CGRectMake(0, 60, self.view.frame.size.width, 100) automaticHeight:YES];
     ScrollAnimateItem *introItem = [[ScrollAnimateItem alloc] init];
@@ -105,7 +112,7 @@
     [moreItem setStartingValuesOpacity:1.0f scale:1.0f point:CGPointMake(0, 0)];
     [moreItem addFirstKeyframeForStartScroll:1424 finish:1424+150 opacity:1.0f scale:1.3f point:CGPointMake(0, 140)];
     
-    [self setAnimateItems:[NSArray arrayWithObjects: title, introItem, interestsHeader, sailingItem, sailingImage, secondSailingImage, thirdSailingImage, fourthSailingImage, youtubeSailingImage, skiingItem, skiing1, skiing2, skiing3, whirlygigYoutube, moreItem, nil]];
+    [self setAnimateItems:[NSArray arrayWithObjects: title, introItem, interestsHeader, sailingItem, sailingImage, secondSailingImage, thirdSailingImage, fourthSailingImage, youtubeSailingImage, skiingItem, skiing1, skiing2, skiing3, whirlygigYoutube, moreItem, arrowItem, nil]];
 }
 
 
