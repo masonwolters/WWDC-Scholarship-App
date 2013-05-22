@@ -81,7 +81,7 @@
     timelapseVideo.delegate = self;
     
     
-    HeaderAnimateItem *videoHeader = [[HeaderAnimateItem alloc] initWithTitle:@"Video Editing" yPosition:timelapseImage.view.frame.origin.y + timelapseImage.view.frame.size.height];
+    HeaderAnimateItem *videoHeader = [[HeaderAnimateItem alloc] initWithTitle:@"Video Editing" yPosition:timelapseItem.view.frame.origin.y + timelapseItem.view.frame.size.height];
 
     CardView *videoCard = [[CardView alloc] initWithTitle:nil text:@"Before I got into iOS development, I spent a lot of my time learning After Effects. I got pretty good, and I could do some pretty cool things with video. This will no doubt come in handy someday when I have to make a promotional video for an app." frame:CGRectMake(0, videoHeader.yPosition + 50, self.view.frame.size.width, 510) automaticHeight:NO];
     ScrollAnimateItem *videoItem = [[ScrollAnimateItem alloc] init];
