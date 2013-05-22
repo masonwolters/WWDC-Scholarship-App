@@ -22,6 +22,7 @@
 		BA59060C172A11CD00E40475 /* circle_button_pressed_projects.png in Resources */ = {isa = PBXBuildFile; fileRef = BA590608172A11CD00E40475 /* circle_button_pressed_projects.png */; };
 		BA59060E172A11CD00E40475 /* circle_button_projects@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA59060A172A11CD00E40475 /* circle_button_projects@2x.png */; };
 		BA590614172A140E00E40475 /* circle_button_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA590613172A140E00E40475 /* circle_button_me@2x.png */; };
+		BA639737174C4CB700E4262C /* Whirlygig_small.m4v in Resources */ = {isa = PBXBuildFile; fileRef = BA639736174C4CB700E4262C /* Whirlygig_small.m4v */; };
 		BA838B4D1730329E006FF08F /* TitleAnimateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA838B4C1730329E006FF08F /* TitleAnimateItem.m */; };
 		BA838B511732CFF4006FF08F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA838B501732CFF4006FF08F /* MediaPlayer.framework */; };
 		BA838B5B1732D4CF006FF08F /* Mason W Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA838B5A1732D4CF006FF08F /* Mason W Icon@2x.png */; };
@@ -102,7 +103,6 @@
 		BADA2C871731CE4000CF0CEB /* skiing_powder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C831731CE4000CF0CEB /* skiing_powder@2x.png */; };
 		BADA2C881731CE4000CF0CEB /* summit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C841731CE4000CF0CEB /* summit@2x.png */; };
 		BADA2C891731CE4000CF0CEB /* whirlygig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C851731CE4000CF0CEB /* whirlygig@2x.png */; };
-		BADA2C8E1731F11C00CF0CEB /* Whirlygig_small.m4v in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C8D1731F11C00CF0CEB /* Whirlygig_small.m4v */; };
 		BADA2C911731F17E00CF0CEB /* iScore1.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C8F1731F17E00CF0CEB /* iScore1.png */; };
 		BADA2C921731F17E00CF0CEB /* iScore2.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C901731F17E00CF0CEB /* iScore2.png */; };
 		BADA2C941731F2BD00CF0CEB /* fabric_database@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA2C931731F2BD00CF0CEB /* fabric_database@2x.png */; };
@@ -149,6 +149,7 @@
 		BA590608172A11CD00E40475 /* circle_button_pressed_projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_button_pressed_projects.png; sourceTree = "<group>"; };
 		BA59060A172A11CD00E40475 /* circle_button_projects@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_button_projects@2x.png"; sourceTree = "<group>"; };
 		BA590613172A140E00E40475 /* circle_button_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_button_me@2x.png"; sourceTree = "<group>"; };
+		BA639736174C4CB700E4262C /* Whirlygig_small.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Whirlygig_small.m4v; sourceTree = "<group>"; };
 		BA838B4B1730329E006FF08F /* TitleAnimateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleAnimateItem.h; sourceTree = "<group>"; };
 		BA838B4C1730329E006FF08F /* TitleAnimateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleAnimateItem.m; sourceTree = "<group>"; };
 		BA838B501732CFF4006FF08F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -233,7 +234,6 @@
 		BADA2C831731CE4000CF0CEB /* skiing_powder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skiing_powder@2x.png"; sourceTree = "<group>"; };
 		BADA2C841731CE4000CF0CEB /* summit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "summit@2x.png"; sourceTree = "<group>"; };
 		BADA2C851731CE4000CF0CEB /* whirlygig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whirlygig@2x.png"; sourceTree = "<group>"; };
-		BADA2C8D1731F11C00CF0CEB /* Whirlygig_small.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Whirlygig_small.m4v; sourceTree = "<group>"; };
 		BADA2C8F1731F17E00CF0CEB /* iScore1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iScore1.png; sourceTree = "<group>"; };
 		BADA2C901731F17E00CF0CEB /* iScore2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iScore2.png; sourceTree = "<group>"; };
 		BADA2C931731F2BD00CF0CEB /* fabric_database@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fabric_database@2x.png"; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 		BAD93C5C17287DC000129EFE /* About Me */ = {
 			isa = PBXGroup;
 			children = (
-				BADA2C8D1731F11C00CF0CEB /* Whirlygig_small.m4v */,
+				BA639736174C4CB700E4262C /* Whirlygig_small.m4v */,
 				BAD93C9117287DCA00129EFE /* Images */,
 				BAD93C6517287DC000129EFE /* AppDelegate.h */,
 				BAD93C6617287DC000129EFE /* AppDelegate.m */,
@@ -607,7 +607,6 @@
 				BADA2C871731CE4000CF0CEB /* skiing_powder@2x.png in Resources */,
 				BADA2C881731CE4000CF0CEB /* summit@2x.png in Resources */,
 				BADA2C891731CE4000CF0CEB /* whirlygig@2x.png in Resources */,
-				BADA2C8E1731F11C00CF0CEB /* Whirlygig_small.m4v in Resources */,
 				BADA2C911731F17E00CF0CEB /* iScore1.png in Resources */,
 				BADA2C921731F17E00CF0CEB /* iScore2.png in Resources */,
 				BADA2C941731F2BD00CF0CEB /* fabric_database@2x.png in Resources */,
@@ -620,6 +619,7 @@
 				BA838B5B1732D4CF006FF08F /* Mason W Icon@2x.png in Resources */,
 				BA838B5D1732D4D3006FF08F /* Mason W Icon.png in Resources */,
 				BA838B6117332CCB006FF08F /* arrow@2x.png in Resources */,
+				BA639737174C4CB700E4262C /* Whirlygig_small.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
